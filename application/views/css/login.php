@@ -1,0 +1,1 @@
+<link href="<?=asset_url()?>lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
