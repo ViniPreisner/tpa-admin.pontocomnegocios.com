@@ -468,9 +468,9 @@ class api_model extends MY_Model{
         // busca
         if ($search_terms) {
             $this->db->group_start();
-            $this->db->where('clients.trade_name',$search_terms);
-            $this->db->or_where('clients.name',$search_terms);
-            //$this->db->like('clients.trade_name',$search_terms);
+            $this->db->like('clients.trade_name',$search_terms);
+            $this->db->or_like('clients.name',$search_terms);
+            $this->db->or_like('clients.authorizer_name',$search_terms);
             //$this->db->or_like('clients.name',$search_terms);
             //$this->db->or_like('categories.name',$search_terms);
             $this->db->group_end();
